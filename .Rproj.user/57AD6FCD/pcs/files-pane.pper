@@ -1,0 +1,9 @@
+{
+    "path" : "~/Trading/diario_minuto",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

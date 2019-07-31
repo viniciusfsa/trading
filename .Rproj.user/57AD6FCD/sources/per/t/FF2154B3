@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564581979546.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "247219491",
+    "id" : "FF2154B3",
+    "lastKnownWriteTime" : 1564584790,
+    "last_content_update" : 1564584790991,
+    "path" : "~/Trading/diario_minuto/R/meuScript.R",
+    "project_path" : "R/meuScript.R",
+    "properties" : {
+        "cursorPosition" : "249,0",
+        "scrollLine" : "236"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

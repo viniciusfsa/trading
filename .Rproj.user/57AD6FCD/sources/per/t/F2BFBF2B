@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564585048343.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F2BFBF2B",
+    "lastKnownWriteTime" : 2800382724400,
+    "last_content_update" : 1564585048343,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "E4737514",
+        "caption" : "preco",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=preco&cache_key=E4737514",
+        "displayedObservations" : 1439,
+        "environment" : "",
+        "expression" : "preco",
+        "object" : "preco",
+        "preview" : 0,
+        "totalObservations" : 1439,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

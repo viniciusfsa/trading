@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1564584787538.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F0759822",
+    "lastKnownWriteTime" : 3617335097771761760,
+    "last_content_update" : 1564584787538,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "3F97D7E7",
+        "caption" : "xts1",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=xts1&cache_key=3F97D7E7",
+        "displayedObservations" : 1439,
+        "environment" : "",
+        "expression" : "xts1",
+        "object" : "xts1",
+        "preview" : 0,
+        "totalObservations" : 1439,
+        "variables" : 2
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "precoM = data.matrix(as.data.frame(preco))\nmediaMovel = EMA(precoM[,1],n=10)\nqtdePrecos = length(precoM[,1])\nrisco = 0.01\n\nindexCompras = 1\nindexVendas = 1\n\nnPrevisoesVenda = length(vetorDivergenciasBaixa[,2])\nnPrevisoesCompra = length(vetorDivergenciasAlta[,2])\n\nMatrizVendaCompra <- matrix(data=0,nrow=nPrevisoesVenda,ncol=6)\nMatrizCompraVenda <- matrix(data=0,nrow=nPrevisoesCompra,ncol=6)\n\n#^GSPC(Para C e IBM)    ^NDX(Para AAPL e INTC)\n#Índice NASDAQ ^NDX\n#Índice NYSE ^NYA\n\n\ngetSymbols('^NYA',from='2003-01-01',to='2013-12-31')\nfechamentoIndice = Cl(NYA)\n\nfor(x in 1:qtdePrecos) { \n  #VENDA\n  if(!is.na(precoM[x,2])){\n    MatrizVendaCompra[indexVendas,1] = x\n    MatrizVendaCompra[indexVendas,3] = precoM[x,1]\n    MatrizVendaCompra[indexVendas,5] = fechamentoIndice[x,1]\n    venda = precoM[x,1]  \n    minimo = precoM[x,1]  \n    a = x\n    \n    while(TRUE){\n      \n      if(precoM[a,1]<minimo){\n        minimo = precoM[a,1]\n        #print(paste(\"Nova dta de mínimo\",a) )\n        #print(paste(\"Novo Minimo\",minimo) )\n      }\n      \n      diferenca = mediaMovel[a] - minimo\n      perc = minimo * risco\n      if(diferenca<perc){\n        a = a+1\n        if(a>qtdePrecos-1) \n          break()\n      }\n    \n      else{\n        MatrizVendaCompra[indexVendas,2] = a\n        MatrizVendaCompra[indexVendas,4] = precoM[a,1]\n        MatrizVendaCompra[indexVendas,6] = fechamentoIndice[a,1]\n        indexVendas = indexVendas +1    \n        break()\n      }             \n    }    \n    #print(x)   \n    \n    \n  }\n  \n  \n  #COMPRA\n  else if(!is.na(precoM[x,3])){\n    MatrizCompraVenda[indexCompras,1] = x\n    MatrizCompraVenda[indexCompras,3] = precoM[x,1]\n    MatrizCompraVenda[indexCompras,5] = fechamentoIndice[x,1]\n    compra = precoM[x,1]  \n    maximo = precoM[x,1]  \n    a = x\n    \n    while(TRUE){\n      \n      if(precoM[a,1]>maximo){\n        maximo = precoM[a,1]\n        #print(paste(\"Nova dta de maximo\",a) )\n        #print(paste(\"Novo maximo\",maximo) )\n      }\n      \n      diferenca = maximo - mediaMovel[a]\n      perc = maximo * risco\n      if(diferenca<perc){\n        a = a+1\n        if(a>qtdePrecos-1) \n          break()\n      }\n      \n      else{\n        MatrizCompraVenda[indexCompras,2] = a\n        MatrizCompraVenda[indexCompras,4] = precoM[a,1]\n        MatrizCompraVenda[indexCompras,6] = fechamentoIndice[a,1]\n        indexCompras = indexCompras +1    \n        break()\n      }             \n    }    \n    #print(x)   \n  }\n  \n    \n  \n}\n\n",
+    "created" : 1438776771196.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3872174423",
+    "id" : "ED9A2858",
+    "lastKnownWriteTime" : 1432924258,
+    "path" : "~/Workspace R/Trading/R/estrategia.R",
+    "project_path" : "R/estrategia.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1438776782266.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D2C96911",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "kk2t1wd3m9",
+        "caption" : "MatrizVendaCompra",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=MatrizVendaCompra&cache_key=kk2t1wd3m9",
+        "displayedObservations" : 34,
+        "environment" : "",
+        "object" : "MatrizVendaCompra",
+        "totalObservations" : 34,
+        "variables" : 6
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
