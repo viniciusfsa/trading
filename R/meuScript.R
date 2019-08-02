@@ -22,13 +22,20 @@ View(USDJPY_M1)
 # cria vetor de data
 library(readr)
 library(lubridate)
+
 dates <- dmy_hm(USDJPY_M1$Time)
+dates = dates-dminutes(360)
+i = length(dates)
+dates2 = dates[i:0]
+dates = dates2
+
 
 # cria xts
 xts1 <- xts(x = dates, order.by = dates)
 
 # adiciona coluna de preco
-xts1=cbind(xts1,ultimo=USDJPY_M1$Close);
+precoinv = USDJPY_M1$Close[i:1]
+xts1=cbind(xts1,ultimo=precoinv);
 
 
 
